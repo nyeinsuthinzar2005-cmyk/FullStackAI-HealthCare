@@ -85,6 +85,10 @@ showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+//what is n?
+//  n is the number of slides to move forward or backward.
+//  For example, if n is 1, it will move to the next slide.
+//  If n is -1, it will move to the previous slide.
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -102,7 +106,11 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-
+//why use slides[i]and dots[i]?
+//  slides[i] is used to access each slide element in the collection of slides.
+//  dots[i] is used to access each dot element in the collection of dots.
+//  This allows us to loop through all the slides and dots 
+// and apply the necessary styles to show or hide them based on the current slide index.
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
